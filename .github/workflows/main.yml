@@ -1,7 +1,7 @@
----
 name: simple CI python Application
 on:
-  push: null
+  push: 
+    branches: [ "main" ]
 jobs:
   dev:
     runs-on: ubuntu-latest
