@@ -1,16 +1,21 @@
-name: simple CI python Application
+name: Simple CI Python Application
+
 on:
-  push: 
+  push:
     branches: [ "main" ]
+
 jobs:
   dev:
     runs-on: ubuntu-latest
-  steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: "3.11"
-    - name: run code
-      run: python app.py
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run Python app
+        run: python app.py
